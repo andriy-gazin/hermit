@@ -25,6 +25,10 @@
 	{{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
 	<link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }}>
 	{{ block "head" . -}}{{- end }}
+	{{ range .Site.Params.css.style -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu+Mono" rel="stylesheet"> 
 </head>
 
 <body id="page">

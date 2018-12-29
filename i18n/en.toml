@@ -4,24 +4,24 @@
 # 404.html
 #
 [notFound]
-other = "Oops, page not found…"
+other = "Упс, цієї сторінки не існує…"
 
 [home]
-other = "Home"
+other = "Домівка"
 
 [archives]
-other = "Archives"
+other = "Архів"
 
 # posts/single.html
 #
 [wordCount]
-other = "{{ .WordCount }} Words"
+other = "{{ .WordCount }} Слів"
 
 [tableOfContents]
-other = "Table of Contents"
+other = "Зміст"
 
 [newer]
-other = "Newer"
+other = "Нові"
 
 [older]
-other = "Older"
+other = "Старі"
